@@ -14,8 +14,10 @@ website:
 
 This is a collection of simple tutorials and readings for the ESCP and ELTE Data stewardship students, and prospective experts or interns of Reprex and its partners in music, film, and EsG knowledge and data management.
 
-📖 [Reader](https://opencollections.net/documents/tutorials/reader.html): introductory texts, quotations, presentations about basic concepts, followed by more in-depth articles, books, and other sources.
+📖 [Reader](https://opencollections.net/documents/tutorials/reader.html): introductory texts, quotations, presentations about basic concepts, followed by more in-depth articles, books, and other sources. Edit this file here, or report bugs, request updates.
 
 🛠[️Tools](https://opencollections.net/documents/tutorials/personal-tools.html){target="_blank"}: Simple, open source tools to get you started to work in a smarter, or more productive way.
 
 🇼 [Wikidata tutorial](https://opencollections.net/documents/tutorials/wikidata-tutorial.html): start to work with Wikidata and Wikibase.
+
+🖵 [Adatgazdász prezentáció](https://opencollections.net/documents/tutorials/adatgazdasz.html#/title-slide).
