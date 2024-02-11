@@ -1,0 +1,67 @@
+---
+title: "Reader"
+editor: source
+author:
+  - name: Daniel Antal
+    orcid: 0000-0001-7513-6760
+    url: https://reprex.nl/author/daniel-antal/
+    affiliations:
+      - name: Reprex
+        address: "Saturnusstraat 14"
+        city: The Hague
+        state: Zuid-Holland
+        country: The Netherlands
+        postal-code: "2516 AH"
+        url: https://reprex.nl/
+      - name: OpenCollections
+        url: https://opencollections.net/
+subject: Data stewardship
+papersize: A4
+lang: en-GB
+bibliography: 
+ - bib/semanticwebintro.bib
+---
+
+# Semantic web
+
+Bibliography file: `bib/semanticwebintro.bib`
+
+## Semantic web
+
+-   [Tutorial on Semantic Web](https://www.w3.org/People/Ivan/CorePresentations/SWTutorial/Slides.pdf) (PDF presentation): The semantic web is a decentralized platform (a layer of the internet) for distributed knowledge [@herman_tutorial_2012]
+
+Further reading:
+
+- [SWBP&D WG Semantic Web Tutorials](https://www.w3.org/2001/sw/BestPractices/Tutorials) [@swbp_best_practices] 
+
+## Ontology
+
+*Ontology Development 101: A Guide to Creating Your First Ontology* An ontology defines a common vocabulary for researchers who need to share information in a domain. It includes machine-interpretable definitions of basic concepts in the domain and relations among them. [@ontology_development_101_2001]
+
+>The Artificial-Intelligence literature contains many definitions of an ontology; many of these contradict one another. For the purposes of this guide an **ontology** is a formal explicit description of concepts in a domain of discourse \[*such as film production*\] (**classes** (sometimes called **concepts**[^concepts])), properties of each concept describing various features and attributes of the concept (slots (sometimes called **roles** or **properties**[^properties])), and restrictions on slots (**facets** (sometimes called **role restrictions**[^facets])). An ontology together with a set of individual **instances** [^instances]of classes constitutes a knowledge base. In reality, there is a fine line where the ontology ends and the knowledge base begins.
+
+[^concepts]:  Such as `Human`, `Film`, `Location`.
+
+[^properties]: Such as `line producer` for Human, or `title` for Film or for Location, a `streed Adress.`
+
+[^facets]: Such as a line producer *cannot* be an actor, the film title *can* have language versions, or a street address *must* have a postal code.
+
+[^instances]: In a knowledge base of the Godfather trilogy as a universe, *Francis Ford Coppola* is a Human in the role of a director, *The Godfather Part II* is a title of a film in the knowledge base, and *228 West 47th Sttreet, New York, NY 10036, USA* is a filming location (the Hotel Edison, which is a Place), and it indeed has a postal code, i.e. NY 10036.
+
+
+## RDF
+
+*What is RDF*: RDF is the Word Wide Web (W3C) global standard to encode knowledge, for example, to be distributed on the semantic web layer of the internet.
+
+
+> In the context of knowledge sharing, I use the term ontology to mean a specification of a conceptualisation. That is, an ontology is a description (like a formal specification of a program) of the concepts and relationships that can exist for an agent or a community of agents. This definition is consistent with the usage of ontology as set-of-concept-definitions, but more general. And it is certainly a different sense of the word than its use in philosophy. Tom Gruber, 1993.
+
+
+# Linked Open Data
+
+
+## Wikidata and Wikibase
+
+We have a separate tutorial on Wikidata, followed by an extended reader on the use of Wikibase and wikidata in various contexts. 
+
+A crosscounting read is  *Environmental impact assessment reports in Wikidata and a Wikibase* [@nielsen_environmental_2023]

@@ -1,0 +1,165 @@
+---
+title: "Wikidata"
+subtitle: "Tutorial: Using Wikidata and Wikimedia Commons for Global Identification"
+editor: visual
+author:
+  - name: Daniel Antal
+    orcid: 0000-0001-7513-6760
+    url: https://reprex.nl/author/daniel-antal/
+    affiliations:
+      - name: Reprex
+        address: "Saturnusstraat 14"
+        city: The Hague
+        state: Zuid-Holland
+        country: The Netherlands
+        postal-code: "2516 AH"
+        url: https://reprex.nl/
+      - name: OpenCollections
+        url: https://opencollections.net/
+subject: Wikidata
+papersize: A4
+keywords: 
+ - Wikidata
+ - Wikimedia Commons
+ - QID
+format: 
+   html: 
+     toc-depth: 3
+   epub: 
+     toc-depth: 3
+   pdf:
+    colorlinks: true
+    toc-depth: 3
+    latex: 
+       - lof: true
+   docx: 
+    reference-doc: docx/opencollections-template-en.docx
+lang: en-GB
+date: today
+bibliography: 
+ - bib/wikidata.bib
+---
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(here)
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message= FALSE, 
+                      fig.align = "center", 
+                      fig.width = 0.9)
+
+```
+
+## Global Identities
+
+In this tutorial, I will follow up on the publication of a scanned postcard by `Barasits`. Mr and Mrs Barasits, a.k.a. János Barasits (1859-1935) and his wife, Barasits, Jánosné, born Pichler, Kornélia, were prominent postcard producers and publishers at the beginning of the 20th century. There are plenty of beautiful postcards available from them.
+
+In the 1920s and 1930s, the authors' right (\~copyright) protection of photographs and postcards was relatively short, only 15 years, so their postcards went into the public domain in terms of copying long ago.
+
+Unfortunately, I did not find their name in the most commonly used authority controls, i.e., neither in VIAF nor ISNI. Writing to VIAF is only possible via member institutions, and ISNI costs money. As a temporary solution, I create a Wikidata QID for János Barakovits until somebody registers his name into VIAF.
+
+Writing in Wikidata is free for all and subject to community review. If you read this tutorial, please pledge to record new persons (or other items) into Wikidata if your knowledge is solid. You can verify the information with research.
+
+After creating a QID for János Barakovics, we uploaded one of their family business's public domain works onto Wikimedia Commons, then to archive.org and Flickr.
+
+## Create a Wikidata Item
+
+In this tutorial
+
+```{r wikidata-new-item1}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial",  "wikidata-create-new-item-20240204.png")
+)
+```
+
+You can add options to executable code like this
+
+```{r wikidata-new-item2}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial", "wikidata-create-new-item-Janos-Barasits-20240204-2.png")
+)
+```
+
+Add a few, basic statements to your new item, for example, the János Barasits is a human, he was male, born in 1859 (with the precision of a year only) and died in 1935.
+
+```{r wikidata-add-statements}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial", "wikidata-create-new-item-Janos-Barasits-20240204-3.png")
+)
+```
+
+Here is a very basic Wikidata page for [János Barasits](https://www.wikidata.org/wiki/Q124423018). What is very important that we have a globally unique identifier, `Q124423018` that uniquely identifies him as a human. Later, when somebody creates a VIAF or ISNI identifier for him, we can connect this Wikidata page (i.e., [Q124423018](https://www.wikidata.org/wiki/Q124423018)) to those authority files.
+
+## Upload to Wikimedia Commons
+
+You will face a rights notice: you can only upload files where you are the author and give a free cultural license, or you know that that the image is in the public domain.
+
+```{r wikimedia-upload-item}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial", "wikimedia-upload-new-item-20240204-1.png")
+)
+```
+
+Give a meaningful identifier (unique part of the future URL of the image.) It is a good idea to use a filename that refers back to your catalogue, in this case, I use:
+
+```{r wikimedia-upload-item2}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial", "wikimedia-upload-new-item-20240204-2.png")
+)
+```
+
+Now it is time to describe the uploaded item. In this page, I am giving it an English and a Hungarian title, for example, which is the same as it is found in the inventory book and the catalogue:
+
+```{r wikimedia-upload-item3}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial", "wikimedia-upload-new-item-20240204-3.png")
+)
+```
+
+Now we can add more semantic information about the image. We describe with existing Wikidata entries what is *known* about this postcard. For example, here I state that it describes Margaret island, the *Margaret Island* ([Q18816](https://www.wikidata.org/wiki/Q18816)) tramstop on the Margaret Bridge; furthermore, I connect the image to the previously created *János Barasits* ([Q124423018](https://www.wikidata.org/wiki/Q124423018)) item.
+
+```{r wikimedia-upload-item4}
+knitr::include_graphics(
+  here("png", "wikidata-tutorial", "wikimedia-upload-new-item-20240204-4.png")
+)
+```
+
+## Linking Knowledge
+
+What happened here? We did not simply connect a very basic biography, a scanned vintage postcard and a database entry about a bridge. We linked together in machine-readable (and human readable) form knowledge about a person, his work, and the depicted small island; not only a string, i.e., the name of the island, but
+
+-   the name of the island in many languages;
+-   an encyclopedical description of the island in many languages;
+-   a geocoded location;
+-   identifiers in the global library catalog linking system VIAF, the catalogue identifiers of the national libraries of the U.S. and Israel that hold information carriers (most likely, books) about the island.
+
+```{r wikidata-linking1}
+knitr::include_graphics(here("png", "wikidata-tutorial", 
+                        "wikimedia-link-item-20240204-1.png")
+)
+```
+
+And of course, we created a simple, graphical user interface where people and machines can start to add and link more knowledge about János Barasits.
+
+## Further reading {#wikidata-reader}
+
+Bibliography file: wikidata.bib
+
+-   *Wikidata: From “an” Identifier to “the” Identifier*: using Wikidata QID as global URI for identifying things [@van_veen_wikidata_2019] .
+
+-   *Beyond VIAF: Wikidata as a Complementary Tool for Authority Control in Libraries*: use of Wikidata for librarians - [@bianchini_beyond_2021]
+
+-   *Beyond the Fountain: Mapping a New Entry Point to the Society of Independent Artists*: use of Wikidata for private collections and communities [@siler_beyond_2022]
+
+-   *Bulgarian Icons in Wikidata and EDM*: Reconciliation between Wikidata and the Europeana Data Model [@alexiev_bulgarian_2020]
+
+-   *Wikidata: a new perspective towards universal bibliographic control* [@sardo_wikidata_2022].
+
+-   *Wikidata and Wikibase as complementary research data management services for cultural heritage data*: use in cultural heritage [@rossenova_wikidata_2022]
+
+-   *Wikidata for authority control: sharing museum knowledge with the world*: the use of Wikidata in museums. [@fagerving_wikidata_2023]
+
+- *Providing sustainable data services through Wikibase and Wikidata*: use cases from Europe [@semic_2020_providing_2020]
+
+- *Environmental impact assessment reports in Wikidata and a Wikibase* [@nielsen_environmental_2023]

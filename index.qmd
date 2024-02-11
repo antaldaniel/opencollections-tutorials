@@ -1,0 +1,9 @@
+---
+title: "Readers & Tutorials"
+website:
+ search: 
+    location: navbar
+    type: overlay
+---
+
+This is a collection of simple tutorials and readings for the ESCP and ELTE Data stewardship students, and prospective experts or interns of Reprex and its partners in music, film, and EsG knowledge and data management.
