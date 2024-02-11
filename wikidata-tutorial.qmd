@@ -1,7 +1,7 @@
 ---
-title: "Tutorial: Using Wikidata and Wikimedia Commons for Global Identification"
+title: "Wikidata"
+subtitle: "Tutorial: Using Wikidata and Wikimedia Commons for Global Identification"
 editor: visual
-title-block-banner: "#E88500"
 author:
   - name: Daniel Antal
     orcid: 0000-0001-7513-6760
@@ -25,13 +25,19 @@ keywords:
 format: 
    html: 
      toc-depth: 3
-  pdf:
+   epub: 
+     toc-depth: 3
+   pdf:
     colorlinks: true
+    toc-depth: 3
     latex: 
        - lof: true
-  docx: default
+   docx: 
+    reference-doc: docx/opencollections-template-en.docx
 lang: en-GB
 date: today
+bibliography: 
+ - bib/wikidata.bib
 ---
 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
@@ -129,7 +135,31 @@ What happened here? We did not simply connect a very basic biography, a scanned 
 -   identifiers in the global library catalog linking system VIAF, the catalogue identifiers of the national libraries of the U.S. and Israel that hold information carriers (most likely, books) about the island.
 
 ```{r wikidata-linking1}
-knitr::include_graphics("png", "wikidata-tutorial", "wikimedia-link-item-20240204-1.png")
+knitr::include_graphics(here("png", "wikidata-tutorial", 
+                        "wikimedia-link-item-20240204-1.png")
+)
 ```
 
 And of course, we created a simple, graphical user interface where people and machines can start to add and link more knowledge about János Barasits.
+
+## Further reading {#wikidata-reader}
+
+Bibliography file: wikidata.bib
+
+-   *Wikidata: From “an” Identifier to “the” Identifier*: using Wikidata QID as global URI for identifying things [@van_veen_wikidata_2019] .
+
+-   *Beyond VIAF: Wikidata as a Complementary Tool for Authority Control in Libraries*: use of Wikidata for librarians - [@bianchini_beyond_2021]
+
+-   *Beyond the Fountain: Mapping a New Entry Point to the Society of Independent Artists*: use of Wikidata for private collections and communities [@siler_beyond_2022]
+
+-   *Bulgarian Icons in Wikidata and EDM*: Reconciliation between Wikidata and the Europeana Data Model [@alexiev_bulgarian_2020]
+
+-   *Wikidata: a new perspective towards universal bibliographic control* [@sardo_wikidata_2022].
+
+-   *Wikidata and Wikibase as complementary research data management services for cultural heritage data*: use in cultural heritage [@rossenova_wikidata_2022]
+
+-   *Wikidata for authority control: sharing museum knowledge with the world*: the use of Wikidata in museums. [@fagerving_wikidata_2023]
+
+- *Providing sustainable data services through Wikibase and Wikidata*: use cases from Europe [@semic_2020_providing_2020]
+
+- *Environmental impact assessment reports in Wikidata and a Wikibase* [@nielsen_environmental_2023]
