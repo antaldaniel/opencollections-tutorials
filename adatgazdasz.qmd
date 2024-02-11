@@ -1,0 +1,486 @@
+---
+title: "Adatgazdász"
+format: revealjs
+author:
+  - name: "Antal Dániel, CFA"
+    orcid: 0000-0001-7513-6760
+    url: https://reprex.nl/author/daniel-antal/
+    affiliations:
+      - name: Reprex
+        address: "Saturnusstraat 14"
+        city: The Hague
+        state: Zuid-Holland
+        country: The Netherlands
+        postal-code: "2516 AH"
+        url: https://reprex.nl/
+      - name: OpenCollections
+        url: https://opencollections.net/
+---
+
+## Big Data mindenkinek {.scrollable transition="slide"}
+
+-   Reprex
+
+##  {#slide2-id .scrollable data-menu-title="Big data image" transition="slide"}
+
+## Lokális megoldások globális gyűjteményeknek
+
+::: {.fragment .highlight-current-blue}
+-   Szemantikus web, internet of data layer
+:::
+
+::: {.fragment .highlight-current-blue}
+-   Minden gyűjteményi elem egy a világ globális gyűjteményéből
+:::
+
+::: {.fragment .highlight-current-blue}
+-   A World Wide Web representáció összekötése a fizikai gyűjteménnyel
+:::
+
+::: {.fragment .highlight-current-blue}
+-   A digitális gyűjteményből linkek mindenhova a világon, ahol a fizikai gyűjteményről tudás található
+:::
+
+## Lokális megoldások globális gyűjteményeknek (példák) {.smaller .scrollable transition="slide"}
+
+::: columns
+::: {.column width="50%"}
+Minden gyűjteményi elem egy a világ globális gyűjteményéből: mindennek legyen globálisan azonos és állandó azonosítója.
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+Globálisan egyedi azonosító: <https://doi.org/10.5281/zenodo.10259347>
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+Compact formában: \[doi:10.5281/zenodo.10259347\]
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+Dereferencing: Átírányítva egy weboldalra, HTML embereknek, RDF gépeknek.
+:::
+:::
+
+::: {.column width="50%"}
+[![](png/data-steward-presentation/doi-example-zenodo_6x4.png)](https://doi.org/10.5281/zenodo.10259347)
+
+::: {style="font-size: 70%;"}
+Próbáld ki a <https://doi.org/10.5281/zenodo.10259347> linket!
+:::
+:::
+:::
+
+::: footer
+További olvasmányok: [opencollections.net/documents/tutorials](https://opencollections.net/documents/tutorials/reader.html)
+:::
+
+## Gyűjtemény létrehozása {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Általános folyamat ↓
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Erdeti műtárgyak (például képeslapok) leltári nyilvántartásba vétele
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Digitális másolatok (például a szkennelt képeslapok) leltári nyilvántartásba vétele
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Erdeti műtárgyak (például képeslapok) adattári nyilvántartásba vétele
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Digitális másolatok (például képeslapok) adattári nyilvántartásba vétele
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   A nyilvántartások összekötése a világ többi nyilvántartásával
+:::
+
+### Hazai elvárások ↓
+
+20/2002. (X. 4.) NKÖM rendelet [a muzeális intézmények nyilvántartási szabályzatáról](https://net.jogtar.hu/jogszabaly?docid=a0200020.nkm)
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Leltári szám: helyi azonosító
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Adattári szám: provenancia, a szerzés körülményei
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Globális azonosító: URI
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   A nyilvántartások leírása RDF-ben: a világ minden gyűjteménye számára olvasható leltárkönyv és adattár
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Web katalógus: rendszerezett szolgáltatások (megtekintés, letöltés, kölcsönzés) létrehozása
+:::
+:::
+
+::: footer
+Navigáció a panelek között: `TAB`. Paneleken belül: `↓` és `↑`.
+:::
+
+## Emberek és gépek által olvasható nyilvántartások
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   A leltári, adattári nyilvántartások, illetve könyvtári (tudástári) katalógusok, taxonomóiák nemzetközi szabványosításra régen tart.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   Az World Wide Web megjelenése óta tart a nyilvántartások és katalógusok teljes egybenyitása, függetlenül attól, hogy a szolgáltató magán- vagy közgyűjtemény, levéltár, múzeum, könyvtár vagy webshop.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+-   A globális összekötöttség érdekében cél a természetes nyelvektől való nagyfokú függetlenség és a gépi olvashatóhatóság.
+:::
+
+## Univerzális nyilvántartás
+
+::: panel-tabset
+### Nyilvántartások
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A HTTP protokol és az URL általánosítása (nem kell tudnom, hogy fizikailag hol van a számítógép és hogyan jutok oda.)
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   Univerzális, kódolt, számítógéppel olvasható tudásrögzítés dolgokról (például `Könyv`, `Író`) és kapcsolatukról (`a szerzője`, `a fordítója`, `a kiadója`)
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+`Író:Szerb Antal` a szerzője `Könyv:Utas és holdvilág`
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+`Író:Antal Szerb` authored `Könyv:Jorney by Moonlight`
+:::
+
+### Azonosítók
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   VIAF: Virtual International Authority File ([VIAF ↗](https://viaf.org/viaf/147301654/#E%C3%B6tv%C3%B6s_Lor%C3%A1nd_Tudom%C3%A1nyegyetem.)) - katalóguscímek (nevek, intézményi nevek) globális azonsoítására.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   DOI: Digital Object Identifier ([DOI ↗](https://www.doi.org/)) - dokumentumok általános azonosítására.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   ISBN: International Standard Book Numbe ([ISBN ↗](https://isbnsearch.org/)) - könyvek általános azonosítására.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   HTTP: Weboldalak általános azonosítására.
+:::
+
+### Nyelvek
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   OWL: Web Ontology Language ([OWL ↗](https://www.w3.org/OWL/)) - a tudás természetes nyelvektől független, géppel olvasható, kódolt leírása. Például annak a meghatározása, hogy az `Író` vagy `Könyv` micsoda.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   RDF: Resource Description Framework ([RDF ↗](https://www.w3.org/2001/sw/wiki/RDF)) - a webes adatcsere modelje. Annak a meghatározása, hogy az `Író`, `Könyv`, `Irat`, `Levelezőlap`, `Szobor`, `szerzőség`, `tulajdon` adatait hogyan lehet átadni egy ember által olvasható weboldalnak vagy egy gép által olvasható adatfájlnak.
+:::
+
+### Modellek
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   Múzeumi nyilvántartás modellezése: a CIDOC Conceptual Reference Model (CIDOC-CRM) a kulturális örökség nyilvántartásainak modellezését teszi lehetővé. Lásd [www.cidoc-crm.org ↗](https://www.cidoc-crm.org/). 2006 óta nemzetközi szavány `ISO 21127:2006`.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   Records in Contexts–Conceptual Model (RiC-CM): a korábbi nemzetközi archívumi szabványokat \[ISAD(G), ISAAR(CPF), ISDF, ISDIAH\] felváltó általános modell. Lásd [ica.org ↗](https://www.ica.org/resource/records-in-contexts-conceptual-model/).
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   EDM: Az Europeana Data Model az európai digitális kulturális örökség aggregálásához [EDM ↗]((https://pro.europeana.eu/page/edm-documentation)).
+:::
+:::
+
+## Univerzálisan kódolt tudás {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Nyelv: OWL
+
+OWL: Web Ontology Language ([OWL↗](https://www.w3.org/OWL/))
+
+-   A tudás természetes nyelvektől független, géppel olvasható, kódolt leírása.
+-   Dolgok meghatározása: az `Író` vagy `Könyv` micsoda, és a köztük lévő kapcsolat leírása: `szerzője` vagy `fordítója`, illetve logikai kapcsolatok leírása (1989-ben `született` személy mint `Író` nem lehet `szerzője` egy 1988-ban írt `Könyvnek`)
+-   Alkalmas ontológiák, taxonómiák, tezaurusok elkészítésére, dokumentálására.
+-   Általában nem kézzel kódoljuk, hanem tudásmenedzsment alkalmazásokkal, amelyek közül a legelterjedtebb a `Protégé`.
+
+### Eszköz: Protégé
+
+[![](https://protegewiki.stanford.edu/images/thumb/1/1d/WP-classes.png/800px-WP-classes.png){fig-align="center" width="700"}](https://doi.org/10.5281/zenodo.10259347)
+:::
+
+::: footer
+További információk: előadás [irodalomjegyzék ↗](https://opencollections.net/documents/tutorials/reader.html), Protégé ingyenes letöltés és tananyag: [Protégé wiki ↗](https://protegewiki.stanford.edu/wiki/Main_Page).
+:::
+
+## Univerzálisan kódolt leírás {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Nyelv: RDF
+
+RDF: Resource Description Framework ([RDF ↗](https://www.w3.org/2001/sw/wiki/RDF)) - a webes adatcsere modelje.
+
+-   Annak a meghatározása, hogy az `Író`, `Könyv`, `Irat`, `Levelezőlap`, `Szobor`, `szerzőség`, `tulajdon` adatait hogyan lehet átadni egy ember által olvasható weboldalnak vagy egy gép által olvasható adatfájlnak.
+
+-   Teljesen összekapcsolatható az OWL nyelvvel.
+
+### Eszköz: Turtle editor
+
+```         
+EXAMPLE 1
+@base <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<#green-goblin>
+    rel:enemyOf <#spiderman> ;
+    a foaf:Person ;    # in the context of the Marvel universe
+    foaf:name "Green Goblin" .
+
+<#spiderman>
+    rel:enemyOf <#green-goblin> ;
+    a foaf:Person ;
+    foaf:name "Spiderman", "Человек-паук"@ru .
+```
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A tudásra vonatkozó, weben elérhető definíciók meghatározása a prefix részben, például az RDF nyelv használatának a rögzítése `rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A tudás állítások formájában történő rögzítése: Green Goblin `<#green-goblin>` ellensége `rel:enemyOf` Spiderman `<#spiderman>`.
+:::
+:::
+
+::: footer
+További információk: előadás [irodalomjegyzék ↗](https://opencollections.net/documents/tutorials/reader.html), W3C meghatározás és tananyag: [RDF Turtle 1.2 ↗](https://www.w3.org/TR/rdf12-turtle/).
+:::
+
+## Esettanulmány
+
+[![](png/data-steward-presentation/archive_org_postcards_2x1.png){fig-align="center" width="800"}](https://archive.org/details/@daniel_antal)
+
+Hosszú távú archiválás: [archive.org](https://archive.org/details/@daniel_antal). Globális, örök azonosítás: [FigShare DOI](https://figshare.com/account/home#/collections/6998157). Megjelenítés: [Flickr](https://www.flickr.com/photos/197707958@N02/albums/72177720314197166/).
+
+## Levelezőlapok leírása {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Kis privát gyűjtemény
+
+Aukción vásárolt régi képeslapok Budapestről. Szkennelve a másolatok feltöltve az archive.org digitális archívumba.
+
+[![](png/data-steward-presentation/archive_org_postcards_2x1.png){fig-align="center" width="600"}](https://archive.org/details/pstcrdf4266-budapest-erzsebet-hid-01)
+
+### Eszköz: Turtle editor
+
+```         
+@prefix ex: <http://example.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix archive: <https://archive.org/details/> .
+@prefix aat: <http://vocab.getty.edu/page/aat> .
+@prefix viaf: <http://viaf.org/viaf/>
+@prefix dc: <http://purl.org/dc/terms/>
+@prefix doi: <http://doi.org/>
+@prefix edm: <http://www.europeana.eu/schemas/edm/>
+@prefix flickr: <https://www.flickr.com/photos/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<ex:pstcrdf426c-budapest-national-museum>
+    dc:title "Nemzeti Múzeum";
+    dc:identifier doi:10.6084/m9.figshare.25140095.v1
+    a archive:pstcrdf426c-budapest-national-museum
+    a aat:300026819 ;    # picture postcards in AAT
+    crm:P62depicts <ex:nemzeti-muzeum>
+    edm:isShownAt flickr:197707958@N02/53508120764 .
+
+<ex:nemzeti-muzeum>
+    a viaf:312926811;   # 
+    foaf:name "Nemzeti Múzeum", "National Museum"@en .
+```
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A tudásra vonatkozó, weben elérhető definíciók meghatározása a prefix részben, például az RDF nyelv használatának a rögzítése `rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A tudás állítások formájában történő rögzítése: Green Goblin `<#green-goblin>` ellensége `rel:enemyOf` Spiderman `<#spiderman>`.
+:::
+
+### PID
+
+```         
+@prefix ex: <http://example.org/> .
+@prefix dc: <http://purl.org/dc/terms/>
+@prefix doi: <http://doi.org/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<ex:pstcrdf426c-budapest-national-museum>
+    dc:title "Nemzeti Múzeum";
+    dc:identifier doi:10.6084/m9.figshare.25140095.v1 .
+```
+
+-   **Permanent Identifier (PID)**: DOI. A [FigShare](https://figshare.com/articles/figure/Nemzeti_M_zeum/25140095/1) oldalán készítettem a képeknek egy globálisan univerzális DOI azonosítót, amit itt lehet kiprórbálni: <http://doi.org/10.6084/m9.figshare.25140095.v1>
+
+### Tárhely
+
+```         
+@prefix ex: <http://example.org/> .
+@prefix archive: <https://archive.org/details/> .
+@prefix edm: <http://www.europeana.eu/schemas/edm/>
+@prefix flickr: <https://www.flickr.com/photos/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<ex:pstcrdf426c-budapest-national-museum>
+    dc:title "Nemzeti Múzeum";
+    a archive:pstcrdf426c-budapest-national-museum
+    edm:isShownAt flickr:197707958@N02/53508120764 .
+```
+
+::: {.fragment .highlight-current-blue style="font-size: 75%;"}
+-   **Tárolás**: `archive.org` Az [archive.org](https://figshare.com/articles/figure/Nemzeti_M_zeum/25140095/1) oldalán helyeztem el hosszú távra a képeslapok *szkennelt másolatát* (nem azonos a képeslappal!). Itt lehet kipróbálni: <https://archive.org/details/pstcrdf426c-budapest-national-museum>.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 75%;"}
+-   **Megjelenítés**: `flickr.com` A [flickr.com](https://www.flickr.com/photos/197707958@N02/53508120764) oldalát használom megjelenítésre, mert könnyű például blogokba behelyezni a képek előnézetét. Itt lehet kipróbálni: [https://www.flickr.com/photos/197707958\@N02/53508120764](https://www.flickr.com/photos/197707958@N02/53508120764){.uri}.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 75%;"}
+-   **Aggregálás**: Az Europeana számára érthető, hogy itt lehet megtekinteni a képet: `edm:isShownAt flickr:197707958@N02/53508120764`. Ne felejtsük le a `@prefix flickr: <https://www.flickr.com/photos/> .` definíciót!
+:::
+:::
+
+## Levelezőlapok: tudás hozzáadása {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Kis privát gyűjtemény
+
+Aukción vásárolt régi képeslapok Budapestről. Szkennelve a másolatok feltöltve az archive.org digitális archívumba.
+
+[![](png/data-steward-presentation/archive_org_postcards_2x1.png){fig-align="center" width="600"}](https://archive.org/details/pstcrdf4266-budapest-erzsebet-hid-01)
+
+### TTL
+
+```         
+@prefix ex: <http://example.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix archive: <https://archive.org/details/> .
+@prefix aat: <http://vocab.getty.edu/page/aat> .
+@prefix viaf: <http://viaf.org/viaf/>
+@prefix dc: <http://purl.org/dc/terms/>
+@prefix doi: <http://doi.org/>
+@prefix edm: <http://www.europeana.eu/schemas/edm/>
+@prefix flickr: <https://www.flickr.com/photos/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<ex:pstcrdf426c-budapest-national-museum>
+    dc:title "Nemzeti Múzeum";
+    dc:identifier doi:10.6084/m9.figshare.25140095.v1
+    a archive:pstcrdf426c-budapest-national-museum
+    a aat:300026819 ;    # picture postcards in AAT
+    crm:P62depicts <ex:nemzeti-muzeum>
+    edm:isShownAt flickr:197707958@N02/53508120764 .
+
+<ex:nemzeti-muzeum>
+    a viaf:312926811;   # 
+    foaf:name "Nemzeti Múzeum", "National Museum"@en .
+```
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A tudásra vonatkozó, weben elérhető definíciók meghatározása a prefix részben, például az RDF nyelv használatának a rögzítése `rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>`
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   A tudás állítások formájában történő rögzítése: Green Goblin `<#green-goblin>` ellensége `rel:enemyOf` Spiderman `<#spiderman>`.
+:::
+
+### Autoritások
+
+```         
+@prefix ex: <http://example.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aat: <http://vocab.getty.edu/page/aat> .
+@prefix viaf: <http://viaf.org/viaf/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<ex:pstcrdf426c-budapest-national-museum>
+    a aat:300026819 ;    # picture postcards in AAT
+    crm:P62depicts <ex:nemzeti-muzeum> .
+
+<ex:nemzeti-muzeum>
+    a viaf:312926811;   # 
+    foaf:name "Nemzeti Múzeum", "National Museum"@en .
+```
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   [AAT picture postcard ↗](http://vocab.getty.edu/page/aat/300026819) `http://vocab.getty.edu/page/aat/300026819` a képes levelezőlap globális definíciója.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   [VIAF Magyar nemzeti Múzeum ↗](http://viaf.org/viaf/312926811) `http://viaf.org/viaf/312926811` : a nemzeti könyvtárak autoritás fájlja a Magyar Nemzeti Múzeum mint intézmény azonosításáról.
+:::
+
+### Modell
+
+```         
+@prefix ex: <http://example.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel: <http://www.perceive.net/schemas/relationship/> .
+
+<ex:pstcrdf426c-budapest-national-museum>
+    dc:title "Nemzeti Múzeum";
+    dc:identifier doi:10.6084/m9.figshare.25140095.v1
+    crm:P62depicts <ex:nemzeti-muzeum>
+    edm:isShownAt flickr:197707958@N02/53508120764 .
+
+<ex:nemzeti-muzeum>
+    a viaf:312926811;   # 
+    foaf:name "Nemzeti Múzeum", "National Museum"@en .
+```
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   Múzeumi nyilvántartás modellezése: a CIDOC Conceptual Reference Model (CIDOC-CRM) a kulturális örökség nyilvántartásainak modellezését teszi lehetővé. Lásd [www.cidoc-crm.org ↗](https://www.cidoc-crm.org/). 2006 óta nemzetközi szavány `ISO 21127:2006`.
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 80%;"}
+-   Records in Contexts–Conceptual Model (RiC-CM): a korábbi nemzetközi archívumi szabványokat \[ISAD(G), ISAAR(CPF), ISDF, ISDIAH\] felváltó általános modell. Lásd [ica.org ↗](https://www.ica.org/resource/records-in-contexts-conceptual-model/).
+:::
+:::
+
+## Wikidata
+
+[![](png/wikidata-tutorial/wikidata-create-new-item-Janos-Barasits-20240204-2.png)](https://opencollections.net/documents/tutorials/wikidata-tutorial.html)
+
+::: footer
+További gyakorlat: Barasits János magyar képeslap-készítő globális azonosítójának az elkészítése - [tutorial: Using Wikidata and Wikimedia Commons for Global Identification](https://opencollections.net/documents/tutorials/wikidata-tutorial.html).
+:::
+
+## Wikibase
+
+[![Az elte.dh egy Wikibase instance. A Wikibase a Wikidata és a Wikimedia open source megoldása, amit bárki ingyen telepíthet egy szerverre.](png/data-steward-presentation/elte_dh_2x1.png){fig-align="center"}](https://verskorpusz.elte-dh.hu/)
