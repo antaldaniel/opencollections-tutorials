@@ -1,0 +1,102 @@
+---
+title: "Personal Tools"
+subject: Utilities
+papersize: A4
+keywords: 
+ - Markdown
+ - Zotero
+ - Bibliography
+format: 
+   html: 
+     toc-depth: 3
+---
+
+## Writing interoperability: type a text that appears on any paper or screen format well
+
+All our output needs to be converted to HTML, but that does not mean that we need to work in an HTML editor. However, the need of interoperability among operating systems (Windows, MacOs, Linux) and software packages (at least from Word, Libre, Google Docs to HTML, preferably to PDF, too) requires a simple, common notation.
+
+Markdown is a much simplified HTML-like text markup notation intended to work well with word processors.
+
+![From a simple markdown text file, you can create HTML, Word, PDF, EPUB or even PowerPoint and other web slides.](https://mdg.imgix.net/assets/images/markdown-flowchart.png?auto=format&fit=clip&q=40&w=1080%22)
+
+There are countless Markdown editors. Because Markdown is so simple, you can, if you want to, edit markdown files in Notepad, WordPad (Windows) or VIM (Linux).
+
+Most word processors support markdown. For example, Google Docs has a [free extension](https://workspace.google.com/marketplace/app/docs_to_markdown/700168918607) that converts and document from Docs to markdown.
+
+There are several online Markdown editors that you can use to try writing in Markdown. [Dillinger](https://dillinger.io/) is one of the best online Markdown editors. Just open the site and start typing in the left pane. A preview of the rendered document appears in the right pane.
+
+[![You can link Dilinger with your Dropbox, Google Drive, Microsoft One Drive, BitBucket, and write text that can be converted to HTML, PDF, and with a bit of tweaking to Word or even PowerPoint.](png/markdown/dilliger_example.png)](https://dillinger.io/)
+
+Most word processors support markdown. For example, Google Docs has a [free extension](https://workspace.google.com/marketplace/app/docs_to_markdown/700168918607) that converts and document from Docs to markdown.
+
+::: callout-tip
+### Further markdown reading
+
+-   [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+-   [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
+:::
+
+## Quarto
+
+[![Quarto is an open-source scientific and technical publishing system. If you write code, you can use it as an extension to your favorite IDE.](png/tools/quarto-2x1.png)](https://quarto.org/docs/get-started/)
+
+If not, a good way to start writing fully interoperable, smart text is to use it with [Microsoft VS Code](https://code.visualstudio.com/). Yes, it is a bit geeky: you will write text as if it was a software code.
+
+[![If not, a good way to start writing fully interoperable, smart text is to use it with Microsoft VS Code. Yes, it is a bit geeky: you will write text as if it was a software code.](png/tools/vs_code_2x1.png)](https://code.visualstudio.com/)
+
+The flip side is that you will use a word processor that immediately creates you dashboards, websites, ebooks, and scientific presentations of publications.
+
+-   Author using [Jupyter](https://jupyter.org/) notebooks or with plain text markdown in your favorite editor.
+
+-   Create dynamic content with [Python](https://quarto.org/docs/computations/python.html), [R](https://quarto.org/docs/computations/r.html), [Julia](https://quarto.org/docs/computations/julia.html), and [Observable](https://quarto.org/docs/computations/ojs.html).
+
+-   Publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.
+
+-   Share knowledge and insights organization-wide by publishing to [Posit Connect](https://quarto.org/docs/publishing/rstudio-connect.html), [Confluence](https://quarto.org/docs/publishing/confluence.html), or other publishing systems.
+
+-   Write using [Pandoc](https://pandoc.org/) markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
+
+[Install Quarto](https://quarto.org/docs/get-started/)
+
+```{r, eval=FALSE}
+quarto install extension quarto-ext/fontawesome
+```
+
+## Citation management {#citation-management}
+
+### Bibliographies for all computer systems and programs {#interoperable-bibliography}
+
+The `biblatex` format is the most likely format that you will use for scientific publications. You can export a collection, or more practically, a folder in a collection as a starting point, into the BibLatex format from Zotero (introduced in the previous chapter [Collaboration Tools - Zotero](#zotero). See *Zotero* as a graphic UI, like Windows 11 or MacOS as a human-readable reference database, and the `biblatex` is a machine-readable (DOS or BSD) part. The standard output from *Zotero* is a good start, but usually, it is not perfect. Please open the `bib/example.bib` file and see an example of how to make a reference more usable and interoperable.
+
+```{r, eval=FALSE}
+@book{example_id_2015,---you will use this in your text</br>
+	author = {Doe, Jane},</br>
+	editor = {Doe, Joe},</br>
+	date = {2015-06-06},</br>
+	year = {2015},---some programs do not convert from date automatically</br>
+ 	month = {06},---not needed with books, journals</br>
+ 	day = {06},---not needed with books, journals</br>
+ 	doi = {<a Digital Object identifier code goes here>},---connects to web resources<br>
+ 	isbn = {<an International Standard Book Number identifier goes here>},<br>
+ 	urldate = {2023-07-12},<br>
+ 	title = {This is an {EXAMPLE} title}, --- the EXAMPLE remains UPPERCASE<br>
+ 	abstract = {This is the {Place} for an {AbStraCT}.},---Keep it short, or omit it</br>
+ 	url = {http://example.com/title},<br>
+ 	issn = {<an International Standard Serial Number here>},---connects with library catalogues<br>
+ 	publisher = {{Digital Music Observatory}},<br>
+  keywords = {Example},---use only standardized keywords, like [LCSH](https://id.loc.gov/authorities/subjects.html)<br>
+}
+
+```
+
+A `.bib` file is a text file that you can edit in Notepad or WordPad on Windows, VIM on Linux, in RStudio, or any text editor (not word processor like Word.) It contains the notation of *programmable bibliographic* references.
+
+In `biblatex`, each field has a value. For example, `year=2015` stands for the publication year `2015`. When text is used and not a number, for example, month={March}, you use the `{}` sign as a quotation. The most likely formatting error is with `{}`.
+
+-   **Simple values** have their own standard readings: `author={Doe, Jane}` will translate to `J. Doe` or `Jane Doe`. The `author={Jane Doe}` will translate to `D. Jane`, or `Doe Jane`, because the standard name setting is GivenName, FamilyName.
+
+-   **Double quotation** can override whatever standards. For example, `author={{Jane Doe}}` will always read as `Jane Doe` and not Doe Jane or J. Doe. This is what you use with institutional authors. When no person is named as an author, for example, in the case of a statute law text, use the double quotation. `author={{European Commission}}` with read `European Commission`, but `author={European Commission}` will read `C. European`.
+
+-   **Add a language identifier**, for example, for English language books:</br> `language = {en}`. Your title will be converted to the linguistic requirements of the given language. If you use multiple languages, and you want to avoid English title case for a Slovak or Hungarian document, then double quote the `title={{This is a sentence case title}}` will be `This is a sentence case title`, but `title = {{This is sentence case}}` will be overwritten to `This is Sentence Case` if your default language is English.
+
+-   If you use an **acronym**, then you always have to use double quotation. `The role of the EU in global politics` must be written title = `{The role of the {EU} in global politics}`; otherwise, the EU part will be converted to Eu in English and eu in Slovak. In this case, every word will be captions as required by your main document, but the `EU` part will always remain `EU`.

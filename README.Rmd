@@ -18,7 +18,7 @@ rlang::check_installed("here")
 
 <!-- badges: start -->
 
-[![Project Status: WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [![dataobservatory](https://img.shields.io/badge/ecosystem-dataobservatory.eu-3EA135.svg)](https://dataobservatory.eu/) [![opencollections.net](https://img.shields.io/badge/tutorials-opencollections.net-E88500.svg)](https://opencollections.net/documents/tutorials/index.html)
+[![Project Status: WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [![dataobservatory](https://img.shields.io/badge/ecosystem-dataobservatory.eu-3EA135.svg)](https://dataobservatory.eu/) [![opencollections.net tutorials](https://img.shields.io/badge/tutorials-opencollections.net-E88500.svg)](https://opencollections.net/documents/tutorials/index.html)
 
 <!-- badges: end -->
 
@@ -26,9 +26,9 @@ rlang::check_installed("here")
 
 ## Folders
 
-`root` - The individual pages of [website menu](https://opencollections.net/documents/tutorials/index.html) in `qmd` files.
-`bib` - please save here individual BibTex entries. The consolidated entries will should be placed in one of the main .bib files in the root folder.
-`png` - Portable Network Graphics (png files) for illustrations.
+- [x] `root` - The individual pages of [website menu](https://opencollections.net/documents/tutorials/index.html) in `qmd` files.
+- [x] `bib` - please save here individual BibTex entries. The consolidated entries will should be placed in one of the main .bib files in the root folder.
+- [x] `png` - Portable Network Graphics (png files) for illustrations.
 
 ## Code of Conduct
 

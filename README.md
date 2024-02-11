@@ -1,16 +1,30 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# OpenCollections Tutorials <a href='https://opencollections.net/'><img src='png/logo.png' align="right" /></a>
+# OpenCollections Tutorials <a href='https://opencollections.net/'><img src="png/logo.png" align="right"/></a>
 
 <!-- badges: start -->
 
 [![Project Status:
 WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![dataobservatory](https://img.shields.io/badge/ecosystem-dataobservatory.eu-3EA135.svg)](https://dataobservatory.eu/)
-[![opencollections.net](https://img.shields.io/badge/tutorials-opencollections.net-E88500.svg)](https://dataobservatory.eu/)
+[![opencollections.net
+tutorials](https://img.shields.io/badge/tutorials-opencollections.net-E88500.svg)](https://opencollections.net/documents/tutorials/index.html)
 
 <!-- badges: end -->
+
+🌈 Contribution guidelines - you must abide by the Contributor Covenant
+Code of Conduct.
+
+## Folders
+
+- [x] `root` - The individual pages of [website
+  menu](https://opencollections.net/documents/tutorials/index.html) in
+  `qmd` files.
+- [x] `bib` - please save here individual BibTex entries. The
+  consolidated entries will should be placed in one of the main .bib
+  files in the root folder.
+- [x] `png` - Portable Network Graphics (png files) for illustrations.
 
 ## Code of Conduct
 
