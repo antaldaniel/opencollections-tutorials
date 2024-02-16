@@ -29,6 +29,8 @@ author:
 
 -   Mi lenne akkor, ha a diákoknak és a tárgyaknak az azonosítója azonos volna az ország összes iskolájában? A világ összes iskolájában? És az iskolán kívül?
 
+<https://macxima.medium.com/primary-key-vs-foreign-key-in-sql-d89260b74e1c>
+
 ## Lokális megoldások globális gyűjteményeknek
 
 ::: {.fragment .highlight-current-blue}
