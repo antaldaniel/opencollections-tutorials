@@ -21,7 +21,13 @@ author:
 
 -   Reprex
 
-##  {#slide2-id .scrollable data-menu-title="Big data image" transition="slide"}
+## "Gondolkojd globálisan, cselekedj lokálisan"
+
+![A helyi kulcsok rendszere: elsődleges és idegen kulcsok egy SQL adatbázisban](png/database/1_wr_PNTP9fQHxXeMydaSfnQ.png){fig-align="center"}
+
+-   Minden diáknak és felvett tárgynak van egy azonosítója az oktatási adatbázisban?
+
+-   Mi lenne akkor, ha a diákoknak és a tárgyaknak az azonosítója azonos volna az ország összes iskolájában? A világ összes iskolájában? És az iskolán kívül?
 
 ## Lokális megoldások globális gyűjteményeknek
 
@@ -165,15 +171,15 @@ Navigáció a panelek között: `TAB`. Paneleken belül: `↓` és `↑`.
 ### Azonosítók
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
--   VIAF: Virtual International Authority File ([VIAF ↗](https://viaf.org/viaf/147301654/#E%C3%B6tv%C3%B6s_Lor%C3%A1nd_Tudom%C3%A1nyegyetem.)) - katalóguscímek (nevek, intézményi nevek) globális azonsoítására.
+-   VIAF: Virtual International Authority File ([VIAF ↗](https://viaf.org/viaf/147301654/#E%C3%B6tv%C3%B6s_Lor%C3%A1nd_Tudom%C3%A1nyegyetem.){target="_blank"}) - katalóguscímek (nevek, intézményi nevek) globális azonsoítására.
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
--   DOI: Digital Object Identifier ([DOI ↗](https://www.doi.org/)) - dokumentumok általános azonosítására.
+-   DOI: Digital Object Identifier ([DOI ↗](https://www.doi.org/){target="_blank"}) - dokumentumok általános azonosítására.
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
--   ISBN: International Standard Book Numbe ([ISBN ↗](https://isbnsearch.org/)) - könyvek általános azonosítására.
+-   ISBN: International Standard Book Numbe ([ISBN ↗](https://isbnsearch.org/){target="_blank"}) - könyvek általános azonosítására.
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
