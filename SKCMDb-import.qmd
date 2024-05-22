@@ -55,6 +55,12 @@ format: revealjs
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
 External identifiers: `VIAF ID`: [113230702⭧](https://viaf.org/viaf/113230702/); `GND`: [119033364⭧](https://d-nb.info/gnd/119033364); `Slovak National Library (VIAF) ID`: [vtls005710289⭧](https://viaf.org/processed/SKMASNL%7Cvtls005710289)
+Statements: `class of` deceased person. `date of birth`: 11 March 1952. `place of death`: [Santa Barbara⭧](https://www.wikidata.org/wiki/Q159288). `given name`: [Douglas⭧](https://www.wikidata.org/wiki/Q463035)
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+External identifiers: `VIAF ID`: [113230702⭧](https://viaf.org/viaf/113230702/) `GND`: [119033364⭧](https://d-nb.info/gnd/119033364) `Slovak National Library (VIAF) ID`: [vtls005710289⭧](https://viaf.org/processed/SKMASNL%7Cvtls005710289)
+>>>>>>> a36ef9cd5abbbdbd9f143bbba97e8f617862bb41
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
