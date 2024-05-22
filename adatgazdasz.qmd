@@ -41,6 +41,11 @@ author:
 ::: panel-tabset
 ### Bizonytalanság
 
+
+## "Gondolkojd globálisan, cselekedj lokálisan"
+
+![A helyi kulcsok rendszere: elsődleges és idegen kulcsok egy SQL adatbázisban](png/database/1_wr_PNTP9fQHxXeMydaSfnQ.png){fig-align="center"}
+
 ![A könyvtárak sok évtizede dolgoznak azon, hogy az azonos nevű szerzők könyvei a helyes polcra kerüljenek.](png/listen-local/Library_Thing_James_Campbell_16x9.png){width="800"}
 
 ### Adatszennyezés
@@ -56,13 +61,16 @@ author:
 
 ![A helyi kulcsok rendszere: elsődleges és idegen kulcsok egy SQL adatbázisban](png/database/1_wr_PNTP9fQHxXeMydaSfnQ.png){fig-align="center" width="800"}
 
+
 -   Minden diáknak és felvett tárgynak van egy azonosítója az oktatási adatbázisban?
 
 -   Mi lenne akkor, ha a diákoknak és a tárgyaknak az azonosítója azonos volna az ország összes iskolájában? A világ összes iskolájában? És az iskolán kívül?
 
+
 ::: footer
 A lokális kulcsok ábra forrása [Ryan Arjun: SQL --- Primary key vs Foreign Key](https://macxima.medium.com/primary-key-vs-foreign-key-in-sql-d89260b74e1c)
 :::
+
 
 ## Lokális megoldások globális gyűjteményeknek
 
