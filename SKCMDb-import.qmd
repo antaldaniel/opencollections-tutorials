@@ -1,5 +1,7 @@
 ---
 title: "SKCMDb import"
+date: "2024-05-21"
+subtitle: "Navigate the presentation with the ⯇ ⯈ arrows"
 format: revealjs
 ---
 
@@ -40,15 +42,15 @@ format: revealjs
 `label`: Douglas Adams. `description`: British writer and humorist. Brit író és humorista. `aliases`: known alternative name versions.
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
-Statements: `class of` deceased person. `date of birth`: 11 March 1952. `place of death`: [Santa Barbara](https://www.wikidata.org/wiki/Q159288). `given name`: [Douglas](https://www.wikidata.org/wiki/Q463035)
+Statements: `class of` deceased person. `date of birth`: 11 March 1952. `place of death`: [Santa Barbara⭧](https://www.wikidata.org/wiki/Q159288). `given name`: [Douglas⭧](https://www.wikidata.org/wiki/Q463035)
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
-External identifiers: `VIAF ID`: [113230702](https://viaf.org/viaf/113230702/) `GND`: [119033364](https://d-nb.info/gnd/119033364) `Slovak National Library (VIAF) ID`: [vtls005710289](https://viaf.org/processed/SKMASNL%7Cvtls005710289)
+External identifiers: `VIAF ID`: [113230702⭧](https://viaf.org/viaf/113230702/) `GND`: [119033364⭧](https://d-nb.info/gnd/119033364) `Slovak National Library (VIAF) ID`: [vtls005710289⭧](https://viaf.org/processed/SKMASNL%7Cvtls005710289)
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
-We remain compatible with Wikidata for data exchange.
+We remain compatible with Wikidata for data exchange. The blue items with the arrow (like [Douglas⭧](https://www.wikidata.org/wiki/Q463035)) are clickable, they are nodes in our knowledge graph.
 :::
 :::
 
@@ -65,11 +67,11 @@ Take a look at <https://www.wikidata.org/wiki/Q42> !
 
 | variable name      | Wikidata/Wikibase property                                                    | notes                                                                  |
 |------------------|----------------------------|--------------------------|
-| work_title         | [title (P1476)](https://www.wikidata.org/wiki/Property:P1476)                 | the registered (preferred) name title of the work in a given language. |
-| work_subtitle      | [subtitle (P1680)](https://www.wikidata.org/wiki/Property:P1680)              | the subtitle of the work in a given language.                          |
-| work_broader_title | [title of broader work (P6333)](https://www.wikidata.org/wiki/Property:P6333) | only when applicable.                                                  |
-| work_opus          | [opus number (P10855)](https://www.wikidata.org/wiki/Property:P10855)         | when applicable, in a controlled format.                               |
-| sameAs             | [said to be the same as (P460)](https://www.wikidata.org/wiki/Property:P1460) |                                                                        |
+| work_title         | [title (P1476)⭧](https://www.wikidata.org/wiki/Property:P1476)                 | the registered (preferred) name title of the work in a given language. |
+| work_subtitle      | [subtitle (P1680)⭧](https://www.wikidata.org/wiki/Property:P1680)              | the subtitle of the work in a given language.                          |
+| work_broader_title | [title of broader work (P6333)⭧](https://www.wikidata.org/wiki/Property:P6333) | only when applicable.                                                  |
+| work_opus          | [opus number (P10855)⭧](https://www.wikidata.org/wiki/Property:P10855)         | when applicable, in a controlled format.                               |
+| sameAs             | [said to be the same as (P460)⭧](https://www.wikidata.org/wiki/Property:P1460) |                                                                        |
 
 : Work identification {tbl-colwidths="\[25,25,50\]"}
 
@@ -77,13 +79,13 @@ Take a look at <https://www.wikidata.org/wiki/Q42> !
 
 ::: columns
 ::: {.column width="50%"}
-Each composer in our collection datasets is recorded as an instance of the class `living person` (equivalent of [living human (Q18093573)](https://www.wikidata.org/wiki/Q18093573) with a different preferred label), `deceased person` (equivalent of [dead human (Q18093576)](https://www.wikidata.org/wiki/Q18093576) with a different preferred label), or their superclass [human](https://www.wikidata.org/wiki/Q5). When the creator names(s) have not been matched with their entities, we use the temporary `name string` variants.
+Each composer in our collection datasets is recorded as an instance of the class `living person` (equivalent of [living human (Q18093573)⭧](https://www.wikidata.org/wiki/Q18093573) with a different preferred label), `deceased person` (equivalent of [dead human (Q18093576)⭧](https://www.wikidata.org/wiki/Q18093576) with a different preferred label), or their superclass [human⭧](https://www.wikidata.org/wiki/Q5). When the creator names(s) have not been matched with their entities, we use the temporary `name string` variants.
 :::
 
 ::: {.column width="50%"}
 ![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Bella_jan_levoslav.jpg){fig-align="center"}
 
-composer_qid: [Q964103](https://www.wikidata.org/wiki/Q964103)
+composer_qid: [Q964103⭧](https://www.wikidata.org/wiki/Q964103)
 composer_name_string: _Ján Levoslav Bella_
 :::
 :::
@@ -92,11 +94,11 @@ composer_name_string: _Ján Levoslav Bella_
 
 | variable name        | Wikidata/Wikibase property                                                            | notes                                                                                              |
 |------------------|----------------------------|--------------------------|
-| composer_qid         | [composer (P86)](https://www.wikidata.org/wiki/Property:P86)                          | connected composer entity, a human or person, for example                                          |
+| composer_qid         | [composer (P86)⭧](https://www.wikidata.org/wiki/Property:P86)                          | connected composer entity, a human or person, for example                                          |
 | composer_name_string | `new_property:composer (name string)`                                                 | a temporary property for unmatched composers stored as a string, for example, *Ján Levoslav Bella* |
-| lyricist_qid         | `lyricist` (based on [lyrics by (P676)](https://www.wikidata.org/wiki/Property:P676)) | connected lyricist entity, a human or person, for example                                          |
+| lyricist_qid         | `lyricist` (based on [lyrics by (P676)⭧](https://www.wikidata.org/wiki/Property:P676)) | connected lyricist entity, a human or person, for example                                          |
 | lyricist_name_string | `new_property:lyricist (name string)`                                                 | for example, *J. Martinec* for Credo (for bass and orchestra for) by Ján Levoslav Bella.           |
-| sameAs               | [said to be the same as (P460)](https://www.wikidata.org/wiki/Property:P1460)         | on Wikibase, used for suspected duplicates. In RDF, used for connection to other graphs.           |
+| sameAs               | [said to be the same as (P460)⭧](https://www.wikidata.org/wiki/Property:P1460)         | on Wikibase, used for suspected duplicates. In RDF, used for connection to other graphs.           |
 
 : Composer relations {tbl-colwidths="\[25,25,50\]"}
 
@@ -105,8 +107,8 @@ composer_name_string: _Ján Levoslav Bella_
 
 | variable name | Wikidata/Wikibase property                                                | notes                                                                                                                                                                  |
 |------------------|----------------------------|--------------------------|
-|               | [music created for (P9899)](https://www.wikidata.org/wiki/Property:P9899) | a creative work entity, for example, a film, a musical.                                                                                                                |
-|               | [has lyrics (P6439)](https://www.wikidata.org/wiki/Property:P6439)        | a literary work that is used as lyrics. For example [Az éj \[The Night\] (Q25708469)](https://www.wikidata.org/wiki/Q25708469) for `Night` Op. 23. by Albert Albrecht. |
+|               | [music created for (P9899)⭧](https://www.wikidata.org/wiki/Property:P9899) | a creative work entity, for example, a film, a musical.                                                                                                                |
+|               | [has lyrics (P6439)⭧](https://www.wikidata.org/wiki/Property:P6439)        | a literary work that is used as lyrics. For example [Az éj \[The Night\] (Q25708469)⭧](https://www.wikidata.org/wiki/Q25708469) for `Night` Op. 23. by Albert Albrecht. |
 |               | `new property: has lyrics (name string)`                                  | a temporary string for the connected literary work, for example: *Az éj* for `Night` Op. 23. by Albert Albrecht.                                                       |
 
 : Related works for musical work {tbl-colwidths="\[25,25,50\]"}
@@ -116,8 +118,8 @@ composer_name_string: _Ján Levoslav Bella_
 
 | variable name       | Wikidata/Wikibase property                                             | notes                                                           |
 |------------------|----------------------------|--------------------------|
-| date_publishing     | [publication date (P577)](https://www.wikidata.org/wiki/Property:P577) | date of first publishing                                        |
-| published_in_larger | [published in (P1433)](https://www.wikidata.org/wiki/Property:P1433)   | only for works published as a part of a larger work, an entity. |
+| date_publishing     | [publication date (P577)⭧](https://www.wikidata.org/wiki/Property:P577) | date of first publishing                                        |
+| published_in_larger | [published in (P1433)⭧](https://www.wikidata.org/wiki/Property:P1433)   | only for works published as a part of a larger work, an entity. |
 
 : Process of publication {tbl-colwidths="\[25,25,50\]"}
 
