@@ -17,19 +17,60 @@ author:
         url: https://opencollections.net/
 ---
 
-## Big Data mindenkinek {.scrollable transition="slide"}
+## Listen Local - Hallgass Hazait {.smaller .scrollable transition="slide"}
 
--   Reprex
+::: panel-tabset
+### Megvalósíthatóság 
+
+[![Projektová štúdia propagácie slovenskej hudby na Slovensku a v zahranicí \[Feasibility Study On Promoting Slovak Music In Slovakia & Abroad\] \[https://doi.org/10.5281/zenodo.6427514\](https://doi.org/10.5281/zenodo.6427514\])](png/listen_local/listen_local_study_covers.png){fig-align="center" width="600"}](https://doi.org/10.5281/zenodo.6427514)
+
+### Demo App
+
+![](png/listen_local/03_app_recommend.png){fig-align="center" width="800"}
+
+### MoU
+
+[![Memorandum o porozumení o využití výsledkov analýz otvorených politík v kontexte slovenského kultúrneho a kreatívneho priemyslu a sektorových verejných politík v spolupráci s konzorciom pre výskum a inovácie s názvom OpenMuse. \[Memorandum of Understanding on utilizing the Open Policy Analysis results of the OpenMuse Research and Innovation Consortium in the context of Slovak cultural and creative industries and sectors' public policies\] \[link\](https://www.crz.gov.sk/zmluva/7645338/)](png/ome/MoU_signing.png){fig-align="center" width="800"}](https://www.crz.gov.sk/zmluva/7645338/)
+:::
+
+
+
+
+## Problémák {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Bizonytalanság
+
 
 ## "Gondolkojd globálisan, cselekedj lokálisan"
 
 ![A helyi kulcsok rendszere: elsődleges és idegen kulcsok egy SQL adatbázisban](png/database/1_wr_PNTP9fQHxXeMydaSfnQ.png){fig-align="center"}
 
+![A könyvtárak sok évtizede dolgoznak azon, hogy az azonos nevű szerzők könyvei a helyes polcra kerüljenek.](png/listen-local/Library_Thing_James_Campbell_16x9.png){width="800"}
+
+### Adatszennyezés
+
+![Hiányzó és hibás adatmezők egy nemzeti kulturális intézményben](png/listen-local/problem_mapping_mic_wikidata.png){width="800"}
+
+### Dezinformáció
+
+![A nyilvánosan elérhető információk gyakran hibásak, elavultak, vagy hiányosak.](png/listen-local/Wikipedia_low_data_quality_example_2x1.png){width="800"}
+:::
+
+## "Gondolkojd globálisan, cselekedj lokálisan" {.smaller .scrollable transition="slide"}
+
+![A helyi kulcsok rendszere: elsődleges és idegen kulcsok egy SQL adatbázisban](png/database/1_wr_PNTP9fQHxXeMydaSfnQ.png){fig-align="center" width="800"}
+
+
 -   Minden diáknak és felvett tárgynak van egy azonosítója az oktatási adatbázisban?
 
 -   Mi lenne akkor, ha a diákoknak és a tárgyaknak az azonosítója azonos volna az ország összes iskolájában? A világ összes iskolájában? És az iskolán kívül?
 
-<https://macxima.medium.com/primary-key-vs-foreign-key-in-sql-d89260b74e1c>
+
+::: footer
+A lokális kulcsok ábra forrása [Ryan Arjun: SQL --- Primary key vs Foreign Key](https://macxima.medium.com/primary-key-vs-foreign-key-in-sql-d89260b74e1c)
+:::
+
 
 ## Lokális megoldások globális gyűjteményeknek
 
@@ -115,7 +156,7 @@ További olvasmányok: [opencollections.net/documents/tutorials](https://opencol
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
--   Adattári szám: provenancia, a szerzés körülményei
+-   Adattári szám: proveniencia, a szerzés körülményei
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 90%;"}
@@ -181,7 +222,7 @@ Navigáció a panelek között: `TAB`. Paneleken belül: `↓` és `↑`.
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
--   ISBN: International Standard Book Numbe ([ISBN ↗](https://isbnsearch.org/){target="_blank"}) - könyvek általános azonosítására.
+-   ISBN: International Standard Book Number ([ISBN ↗](https://isbnsearch.org/){target="_blank"}) - könyvek általános azonosítására.
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
@@ -205,7 +246,7 @@ Navigáció a panelek között: `TAB`. Paneleken belül: `↓` és `↑`.
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
--   Records in Contexts–Conceptual Model (RiC-CM): a korábbi nemzetközi archívumi szabványokat \[ISAD(G), ISAAR(CPF), ISDF, ISDIAH\] felváltó általános modell. Lásd [ica.org ↗](https://www.ica.org/resource/records-in-contexts-conceptual-model/).
+-   Records in Contexts--Conceptual Model (RiC-CM): a korábbi nemzetközi archívumi szabványokat \[ISAD(G), ISAAR(CPF), ISDF, ISDIAH\] felváltó általános modell. Lásd [ica.org ↗](https://www.ica.org/resource/records-in-contexts-conceptual-model/).
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
@@ -243,7 +284,9 @@ RDF: Resource Description Framework ([RDF ↗](https://www.w3.org/2001/sw/wiki/R
 
 -   Annak a meghatározása, hogy az `Író`, `Könyv`, `Irat`, `Levelezőlap`, `Szobor`, `szerzőség`, `tulajdon` adatait hogyan lehet átadni egy ember által olvasható weboldalnak vagy egy gép által olvasható adatfájlnak.
 
--   Teljesen összekapcsolatható az OWL nyelvvel.
+- Teljesen összekapcsolatható az OWL nyelvvel.
+
+- Támogatott fájformátumok: XML-RDF, JSON-LD, N-Quads, Turtle (Terse RDF Triple Language.)
 
 ### Eszköz: Turtle editor
 
@@ -477,7 +520,7 @@ Aukción vásárolt régi képeslapok Budapestről. Szkennelve a másolatok felt
 :::
 
 ::: {.fragment .highlight-current-blue style="font-size: 80%;"}
--   Records in Contexts–Conceptual Model (RiC-CM): a korábbi nemzetközi archívumi szabványokat \[ISAD(G), ISAAR(CPF), ISDF, ISDIAH\] felváltó általános modell. Lásd [ica.org ↗](https://www.ica.org/resource/records-in-contexts-conceptual-model/).
+-   Records in Contexts--Conceptual Model (RiC-CM): a korábbi nemzetközi archívumi szabványokat \[ISAD(G), ISAAR(CPF), ISDF, ISDIAH\] felváltó általános modell. Lásd [ica.org ↗](https://www.ica.org/resource/records-in-contexts-conceptual-model/).
 :::
 :::
 
