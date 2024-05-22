@@ -1,0 +1,136 @@
+---
+title: "SKCMDb import"
+format: revealjs
+---
+
+## Import data by Reprex
+
+::: {.fragment .highlight-current-blue}
+-   Data samples: Hudobné centrum, SOZA
+:::
+
+::: {.fragment .highlight-current-blue}
+-   Data revision: Wikibase
+:::
+
+::: {.fragment .highlight-current-blue}
+-   Data revision: send back improved dataset
+:::
+
+::: {.fragment .highlight-current-blue}
+-   Publishing data and improved website(s)
+:::
+
+## OpenCollections: Wikibase with support {.scrollable transition="slide"}
+
+[![Click on the screenshot to access the manual](png/oc-manual/OC_manual_1.png){width=80%}](https://manual.opencollections.net/)
+
+## Simple User Interface {.scrollable transition="slide"}
+
+[![Click on the screenshot to access the manual](https://manual.opencollections.net/png/wikibase/edit/bella/bella_2.png){width=90%}](https://manual.opencollections.net/wikibase.html)
+
+## OpenCollections: Create an account {.scrollable transition="slide"}
+
+[![Click on the screenshot: create account](https://manual.opencollections.net/png/wikibase/request-account_2.png){width=80%}](https://manual.opencollections.net/sandbox.html)
+
+## Data model {.smaller .scrollable transition="slide"}
+
+::: columns
+::: {.column width="50%"}
+`label`: Douglas Adams. `description`: British writer and humorist. Brit író és humorista. `aliases`: known alternative name versions.
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+Statements: `class of` deceased person. `date of birth`: 11 March 1952. `place of death`: [Santa Barbara](https://www.wikidata.org/wiki/Q159288). `given name`: [Douglas](https://www.wikidata.org/wiki/Q463035)
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+External identifiers: `VIAF ID`: [113230702](https://viaf.org/viaf/113230702/) `GND`: [119033364](https://d-nb.info/gnd/119033364) `Slovak National Library (VIAF) ID`: [vtls005710289](https://viaf.org/processed/SKMASNL%7Cvtls005710289)
+:::
+
+::: {.fragment .highlight-current-blue style="font-size: 90%;"}
+We remain compatible with Wikidata for data exchange.
+:::
+:::
+
+::: {.column width="50%"}
+[![](https://manual.opencollections.net/png/wikidata/File_Datamodel_in_Wikidata.png)](https://www.wikidata.org/wiki/Q42)
+
+::: {style="font-size: 70%;"}
+Take a look at <https://www.wikidata.org/wiki/Q42> !
+:::
+:::
+:::
+
+## Work identification {style="font-size: 70%;"}
+
+| variable name      | Wikidata/Wikibase property                                                    | notes                                                                  |
+|------------------|----------------------------|--------------------------|
+| work_title         | [title (P1476)](https://www.wikidata.org/wiki/Property:P1476)                 | the registered (preferred) name title of the work in a given language. |
+| work_subtitle      | [subtitle (P1680)](https://www.wikidata.org/wiki/Property:P1680)              | the subtitle of the work in a given language.                          |
+| work_broader_title | [title of broader work (P6333)](https://www.wikidata.org/wiki/Property:P6333) | only when applicable.                                                  |
+| work_opus          | [opus number (P10855)](https://www.wikidata.org/wiki/Property:P10855)         | when applicable, in a controlled format.                               |
+| sameAs             | [said to be the same as (P460)](https://www.wikidata.org/wiki/Property:P1460) |                                                                        |
+
+: Work identification {tbl-colwidths="\[25,25,50\]"}
+
+## Creators {.smaller .scrollable transition="slide"}
+
+::: columns
+::: {.column width="50%"}
+Each composer in our collection datasets is recorded as an instance of the class `living person` (equivalent of [living human (Q18093573)](https://www.wikidata.org/wiki/Q18093573) with a different preferred label), `deceased person` (equivalent of [dead human (Q18093576)](https://www.wikidata.org/wiki/Q18093576) with a different preferred label), or their superclass [human](https://www.wikidata.org/wiki/Q5). When the creator names(s) have not been matched with their entities, we use the temporary `name string` variants.
+:::
+
+::: {.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/commons/7/7e/Bella_jan_levoslav.jpg){fig-align="center"}
+
+composer_qid: [Q964103](https://www.wikidata.org/wiki/Q964103)
+composer_name_string: _Ján Levoslav Bella_
+:::
+:::
+
+## Creator data {.smaller .scrollable transition="slide"}
+
+| variable name        | Wikidata/Wikibase property                                                            | notes                                                                                              |
+|------------------|----------------------------|--------------------------|
+| composer_qid         | [composer (P86)](https://www.wikidata.org/wiki/Property:P86)                          | connected composer entity, a human or person, for example                                          |
+| composer_name_string | `new_property:composer (name string)`                                                 | a temporary property for unmatched composers stored as a string, for example, *Ján Levoslav Bella* |
+| lyricist_qid         | `lyricist` (based on [lyrics by (P676)](https://www.wikidata.org/wiki/Property:P676)) | connected lyricist entity, a human or person, for example                                          |
+| lyricist_name_string | `new_property:lyricist (name string)`                                                 | for example, *J. Martinec* for Credo (for bass and orchestra for) by Ján Levoslav Bella.           |
+| sameAs               | [said to be the same as (P460)](https://www.wikidata.org/wiki/Property:P1460)         | on Wikibase, used for suspected duplicates. In RDF, used for connection to other graphs.           |
+
+: Composer relations {tbl-colwidths="\[25,25,50\]"}
+
+
+## Related works {.smaller .scrollable transition="slide"}
+
+| variable name | Wikidata/Wikibase property                                                | notes                                                                                                                                                                  |
+|------------------|----------------------------|--------------------------|
+|               | [music created for (P9899)](https://www.wikidata.org/wiki/Property:P9899) | a creative work entity, for example, a film, a musical.                                                                                                                |
+|               | [has lyrics (P6439)](https://www.wikidata.org/wiki/Property:P6439)        | a literary work that is used as lyrics. For example [Az éj \[The Night\] (Q25708469)](https://www.wikidata.org/wiki/Q25708469) for `Night` Op. 23. by Albert Albrecht. |
+|               | `new property: has lyrics (name string)`                                  | a temporary string for the connected literary work, for example: *Az éj* for `Night` Op. 23. by Albert Albrecht.                                                       |
+
+: Related works for musical work {tbl-colwidths="\[25,25,50\]"}
+
+
+## Publication  {.smaller .scrollable transition="slide"}
+
+| variable name       | Wikidata/Wikibase property                                             | notes                                                           |
+|------------------|----------------------------|--------------------------|
+| date_publishing     | [publication date (P577)](https://www.wikidata.org/wiki/Property:P577) | date of first publishing                                        |
+| published_in_larger | [published in (P1433)](https://www.wikidata.org/wiki/Property:P1433)   | only for works published as a part of a larger work, an entity. |
+
+: Process of publication {tbl-colwidths="\[25,25,50\]"}
+
+> The current file from Hudobné centrum contains the publisher of the music sheets with an ISMN, ISBN-10 or ISBN-13 number. They will be mapped as publishers of the sheets, not the work.  If Hudobné centrum has a list of musical works when it is a publisher of the work, not only of the sheets (or if they have both rights), this needs to be clarified. 
+
+## Further tasks {.smaller .scrollable transition="slide"}
+
+- Wikidata: we need to set up a meeting with Matej G.
+- EU Open Data Portal: No special need
+- SOZA ambassadors: we should get their names first, to see how their data looks like out in the public, and potentially do interview(s) with them. And we should get some personal data from them, too.
+
+## Europeana {.smaller .scrollable transition="slide"}
+
+Europeana: we need a list of musical works -- I think in this case we should prefer performers or composers who are in the Hudobné centrum database -- to be placed on Europeana; we can include here popular artists, too, but in my opinion Europeana would be particularly good for classical and jazz authors.  We could also make a joint blog with Europana eventually to show we are present, but right now. 
+
+Europeana will host works that have a free to view version on YouTube, Vimeo, or other.
